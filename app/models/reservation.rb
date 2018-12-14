@@ -1,9 +1,18 @@
 class Reservation < ApplicationRecord
 
+  validate :restaurant_is_open
   validate :current_capacity
+
 
   belongs_to :user
   belongs_to :restaurant
+
+
+  def restaurant_is_open
+    if restaurant.opening_time > self.time.hour || restaurant.closing_time < self.time.hour
+      errors[:base] << "Sorry,we're closed!"
+    end
+  end
 
   def current_capacity
     restaurant_capacity = restaurant.max_capacity
@@ -17,5 +26,9 @@ class Reservation < ApplicationRecord
       errors[:base] << "Reservation not booked. Restaurant at capacity."
       #reservation booking not possible
     end
+
   end
+
+
+
 end
