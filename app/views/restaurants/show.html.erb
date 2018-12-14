@@ -11,12 +11,12 @@ Hours: <%=@restaurant.opening_time %>AM to <%=@restaurant.closing_time_display%>
 
 <h1>Reserve table </h1>
 
-<%= form_for ([@restaurant,@reservation]) do |f| %>
+<%= form_for ([@restaurant, @reservation]) do |f| %>
  <div class = "field"><%= f.label :time %>:
  <%= f.datetime_select :time, discard_seconds: true, discard_minute: true %>
 
  <div class = "field">
-   <%= f.label  :party_size %>
+ <%= f.label  :party_size %>
  <%= f.text_field  :party_size %> </div>
  <%= f.submit %>
  <% end %>
