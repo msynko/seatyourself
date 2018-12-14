@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 1
+  restaurant_id: 1
+  party_size: 1
+  time: 2018-12-14
+
+two:
+  customer_id: 1
+  restaurant_id: 1
+  party_size: 1
+  time: 2018-12-14

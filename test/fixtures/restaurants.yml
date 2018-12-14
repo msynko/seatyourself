@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  max_capacity: 1
+  hours_open: 2018-12-14 11:34:16
+  menu: MyString
+  address: MyString
+  price_range: MyString
+  phone_number: 1
+
+two:
+  max_capacity: 1
+  hours_open: 2018-12-14 11:34:16
+  menu: MyString
+  address: MyString
+  price_range: MyString
+  phone_number: 1
