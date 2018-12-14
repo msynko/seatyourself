@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   root 'restaurants#index'
   get 'restaurants/index'
 
-  resources :restaurants
-  resources :reservations
+  resources :restaurants do
+     resources :reservations
+  end
   resource :user
 
 end
