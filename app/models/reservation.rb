@@ -12,7 +12,7 @@ class Reservation < ApplicationRecord
     current_reservations.each do |reservation|
       total_current_occupants += reservation.party_size
     end
-
+    total_current_occupants += self.party_size
     if restaurant.max_capacity < total_current_occupants
       errors[:base] << "Reservation not booked. Restaurant at capacity."
       #reservation booking not possible

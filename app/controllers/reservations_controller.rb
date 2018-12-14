@@ -15,9 +15,9 @@ class ReservationsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
     @reservation.restaurant= @restaurant
     if @reservation.save
-      redirect_to restaurant_path(@reservation), notice: "You have added your restaurant!"
+      redirect_to restaurant_path(@restaurant), notice: "You have added your restaurant!"
     else
-      render :new, notice: "We could not add your restaurant"
+      render "/restaurants/show", notice: "We could not add your restaurant"
     end
   end
 

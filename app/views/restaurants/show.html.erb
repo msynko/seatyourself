@@ -7,7 +7,7 @@ Hours: <%=@restaurant.opening_time.hour %> : <%=@restaurant.closing_time.hour%><
 
 <h2><%= @restaurant.price_range %></h2>
 
-<p><%= link_to 'Back to Restaurants', root_url %> | <%= link_to 'Edit Restaurant', edit_restaurant_path %> | <%= link_to 'Delete Restaurant', restaurant_path(@restaurant), method: :delete, data: {confirm: 'Are you sure you want to delete this restaurant?'} %></p>
+<p><%= link_to 'Back to Restaurants', root_url %> | <%= link_to 'Edit Restaurant', edit_restaurant_path(@restaurant) %> | <%= link_to 'Delete Restaurant', restaurant_path(@restaurant), method: :delete, data: {confirm: 'Are you sure you want to delete this restaurant?'} %></p>
 
 <h1>Reserve table </h1>
 
