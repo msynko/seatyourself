@@ -3,7 +3,7 @@
 <p> <%=@restaurant.address %>, price range: <%=@restaurant.price_range %> </p>
 
 <p> Cell: <%=@restaurant.phone_number%>,
-Hours: <%=@restaurant.opening_time.hour %> : <%=@restaurant.closing_time.hour%></p>
+Hours: <%=@restaurant.opening_time %>AM to <%=@restaurant.closing_time_display%></p>
 
 <h2><%= @restaurant.price_range %></h2>
 
