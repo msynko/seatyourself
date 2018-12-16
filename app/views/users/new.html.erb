@@ -1,0 +1,27 @@
+<h1>Create an account</h1>
+
+<%= form_for user_path do |f| %>
+ <div class = "field"><%= f.label :name %>:
+ <%= f.text_field :name %>
+
+ <div class = "field">
+   <%= f.label  :email %>
+ <%= f.text_field  :email %> </div>
+
+ <div class = "field">
+   <%= f.label :phone_number %>
+ <%= f.text_field :phone_number %></div>
+
+ <div class = "field">
+   <%= f.label :password %>
+ <%= f.text_field :password %></div>
+
+ <div class = "field">
+   <%= f.label :password_confirmation %>
+ <%= f.text_field :password_confirmation %></div>
+
+
+<%= f.submit %>
+<% end %>
+
+<p><%= link_to 'Back to Restaurants', root_url %></p>
