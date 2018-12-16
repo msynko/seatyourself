@@ -1,7 +1,9 @@
 class ReservationsController < ApplicationController
 
   def index
-    @reservations = Reservation.all
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @reservations = @restaurant.reservations
+
   end
 
   def new
@@ -12,10 +14,11 @@ class ReservationsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
     @reservation = @restaurant.reservations.new(reservation_params)
     if @reservation.save
-      redirect_to restaurant_path(@restaurant), notice: "You have added your restaurant!"
+      redirect_to restaurant_path(@restaurant)
+      flash[:notice]= "You have added your reservation!"
     else
-      render "/restaurants/show"
-      flash[:notice] = "We could not add your restaurant."
+      redirect_to root_url
+      flash[:notice] = "We could not add your reservation."
     end
   end
 
@@ -25,8 +28,9 @@ class ReservationsController < ApplicationController
 
   def destroy
     @reservation = Reservation.find(params[:id])
-    @reservation.destroy
-    redirect_to "/reservations",
+      @reservation.destroy
+      redirect_to root_url
+
      flash[:notice] = "Reservation deleted"
   end
 
