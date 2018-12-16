@@ -7,6 +7,9 @@ Rails.application.routes.draw do
      resources :reservations
   end
   resource :users
-  resource :sessions, only: %i(new create destroy)
+
+  resources :sessions
+
+
 
 end

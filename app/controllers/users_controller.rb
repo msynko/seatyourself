@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
 
-
     def new
     @user = User.new
   end
@@ -14,15 +13,13 @@ class UsersController < ApplicationController
     @user.password_confirmation = params[:user][:password_confirmation]
 
     if @user.save
-      redirect_to root_url
+      redirect_to new_sessions_url
       flash[:notice] = "You have created your account!"
     else
       render :new
       flash[:notice] = "We could not create your account"
     end
   end
-
-
 
   def edit
     @user = User.find(params[:id])
