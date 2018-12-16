@@ -14,7 +14,8 @@ class ReservationsController < ApplicationController
     if @reservation.save
       redirect_to restaurant_path(@restaurant), notice: "You have added your restaurant!"
     else
-      render "/restaurants/show", notice: "We could not add your restaurant."
+      render "/restaurants/show"
+      flash[:notice] = "We could not add your restaurant."
     end
   end
 
@@ -25,7 +26,8 @@ class ReservationsController < ApplicationController
   def destroy
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
-    redirect_to "/reservations", notice: "Reservation deleted"
+    redirect_to "/reservations",
+     flash[:notice] = "Reservation deleted"
   end
 
   private

@@ -25,9 +25,11 @@ class RestaurantsController < ApplicationController
     @restaurant.menu = params[:restaurant][:menu]
 
     if @restaurant.save
-      redirect_to product_path(@restaurant), notice: "You have added your restaurant!"
+      redirect_to restaurant_path(@restaurant)
+      flash[:notice] = "You have added your restaurant!"
     else
-      render :new, notice: "We could not add your restaurant"
+      render :new
+      flash[:notice] = "We could not add your restaurant"
     end
   end
 
@@ -47,16 +49,19 @@ class RestaurantsController < ApplicationController
     @restaurant.menu = params[:restaurant][:menu]
 
     if @restaurant.save
-      redirect_to product_path(@restaurant), notice: "You have added your restaurant!"
+      redirect_to restaurant_path(@restaurant)
+       flash[:notice] = "You have updated your restaurant!"
     else
-      render :new, notice: "We could not add your restaurant"
+      render :new
+      flash[:notice] = "We could not add your restaurant"
     end
   end
 
   def destroy
     @restaurant= Restaurant.find(params[:id])
     @restaurant.destroy
-    redirect_to "/restaurants", notice: "Restaurant deleted"
+    redirect_to "/restaurants"
+    flash[:notice] = "Restaurant deleted"
   end
 
 end
