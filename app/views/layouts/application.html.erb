@@ -5,21 +5,26 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/jellee-typeface" type="text/css"/>
 </head>
 <body>
-  <p class="userinfo">
+  <header class="site-header">
+    <h1 class = "site-title">Seat Yourself</h1>
     <% if flash[:notice] %>
      <div class="notice"><%= flash[:notice] %></div>
     <% end %>
     <% if flash[:alert] %>
      <div class="alert"><%= flash[:alert] %></div>
     <% end %>
+    <ul site-nav-list>
        <% if current_user %>
-         Signed in as <%= current_user.email %>. <%= link_to "Log out", sessions_path, :method => :delete %>
+         Signed in as <%= current_user.email %>. <a class = "list-item"><%= link_to "Log out", sessions_path, :method => :delete %></a>
        <% else %>
-         <%= link_to "Log in", new_sessions_path %> or <%= link_to "Sign up", new_users_path %>
+         <a class = "list-item"><%= link_to "Log in", new_sessions_path %></a> or <a class = "list-item"><%= link_to "Sign up", new_users_path %></a>
        <% end %>
-       </p>
+        </ul>
+       </header>
+
 <%= yield %>
 
 </body>
