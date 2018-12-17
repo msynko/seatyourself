@@ -1,11 +1,12 @@
 <h1> All Reservations </h1>
 
+<ul>
 <% @reservations.each do |reservation| %>
-
-<%= reservation.time  %>
-<%= reservation.party_size  %>
-<%= reservation.user_id %>
-# include user.name, phone number etc.
+<li>Name: <%= reservation.user.name %></li>
+<li>Phone number: <%= reservation.user.phone_number %></li>
+<li>Time: <%= reservation.time %></li>
+<li>Party size: <%= reservation.party_size  %></li>
+</ul>
 <%= link_to 'Delete Reservation', restaurant_reservation_path(reservation.restaurant, reservation), method: :delete, data: {confirm: 'Are you sure you want to delete this reservation?'} %>
 
 <%end%>

@@ -8,28 +8,39 @@
  </ul>
 <% end %>
 
+<div class="form_container">
 <%= form_for [@user] do |f| %>
- <div class = "field"><%= f.label :name %>:
- <%= f.text_field :name %>
 
- <div class = "field">
-   <%= f.label  :email %>
- <%= f.text_field  :email %> </div>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
 
- <div class = "field">
-   <%= f.label :phone_number %>
- <%= f.text_field :phone_number %></div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
 
- <div class = "field">
-   <%= f.label :password %>
- <%= f.password_field :password %></div>
+  <div class="field">
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number %>
+  </div>
 
- <div class = "field">
-   <%= f.label :password_confirmation %>
- <%= f.password_field :password_confirmation %></div>
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
 
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
 
-<%= f.submit %>
-<% end %>
+  <div class="submit_button">
+    <%= f.submit %>
+    <% end %>
+  </div>
+
+</div>
 
 <p><%= link_to 'Back to Restaurants', root_url %></p>

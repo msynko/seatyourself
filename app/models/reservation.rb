@@ -8,7 +8,7 @@ class Reservation < ApplicationRecord
 
   def restaurant_is_open
     if restaurant.opening_time > self.time.hour || restaurant.closing_time < self.time.hour
-      errors[:base] << "Sorry,we're closed!"
+      errors[:base] << "Sorry, we're closed!"
     end
   end
 
