@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
  *,
   *::before,
   *::after {
@@ -20,20 +21,18 @@
     text-align: center;
   }
 
-
-  html {
-   box-sizing: border-box;
-   font-family: 'JelleeRoman';
-   font-size: 100%;
-   color: #333333;
-   background-color: rgb(236, 236, 236);
+html {
+  box-sizing: border-box;
+  font-family: 'JelleeRoman';
+  font-size: 100%;
+  color: #333333;
+  background-color: #fff;
  }
 
-   body {
-   margin: 0;
-     padding: 0;
-   }
-
+body {
+  margin: 0;
+  padding: 0;
+}
 
  .site-header {
    // position: fixed;
@@ -42,11 +41,11 @@
    right: 0;
    width: 100%;
    z-index: 100;
-   background-color: rgb(102, 9, 9);
+   background-color: #c64343;
    color: white;
    display: grid
-
  }
+
  .site-title {
  text-align: rigth;
  font-size: 2em;
@@ -57,14 +56,16 @@
    list-style-type: none;
    text-align: left;
  }
- .list-item {
-   text-align: left;
- }
- a {
-   text-decoration: none;
-   color: white;
 
+ .list-item {
+  text-align: right;
  }
+
+ a {
+  text-decoration: none;
+  color: white;
+ }
+
  a:hover {
    color: red;
    text-align: center;
@@ -73,6 +74,7 @@
  h3 {
    color: black;
  }
+
  .tile {
      width: 900px;
      margin: 0 auto;
@@ -80,22 +82,16 @@
      background-color: lightgrey ;
      color: black;
 
-
-
      img {
        max-width: 100%;
        max-height: 50%;
-
-
-
      }
-
-
  }
+
  .tile-container {
    display: grid;
    grid-gap: 1px;
    grid-template-columns: 1fr;
    // grid-template-rows: 1fr 1fr;
-
- }
+   max-width: 100%;
+}
