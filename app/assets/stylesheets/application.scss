@@ -14,12 +14,12 @@
  *= require_self
  */
 
- *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    text-align: center;
-  }
+ // *,
+ //  *::before,
+ //  *::after {
+ //    box-sizing: border-box;
+ //    text-align: center;
+ //  }
 
 html {
   box-sizing: border-box;
@@ -27,13 +27,16 @@ html {
   font-size: 100%;
   color: #333333;
   background-color: #fff;
+  text-align: center;
  }
 
 body {
   margin: 0;
   padding: 0;
 }
-
+.old{
+  color:black;
+}
 .new {
   color:black;
 }
@@ -97,4 +100,16 @@ body {
    grid-template-columns: 1fr;
    // grid-template-rows: 1fr 1fr;
    max-width: 100%;
+}
+input[type=submit] {
+  background-color: #c64343;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 15px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
 }

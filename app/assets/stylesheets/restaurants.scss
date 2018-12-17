@@ -1,3 +1,18 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.old{
+  color:black;
+}
+input[type=submit] {
+  background-color: #c64343;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 15px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
