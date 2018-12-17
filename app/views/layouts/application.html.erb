@@ -5,24 +5,26 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/jellee-typeface" type="text/css"/>
 </head>
 <body>
-  <div class="flash_messages">
-    <% if flash[:notice] %>
-     <div class="notice"><%= flash[:notice] %></div>
-    <% end %>
-    <% if flash[:alert] %>
-     <div class="alert"><%= flash[:alert] %></div>
-    <% end %>
-  </div>
+  <header class="site-header">
+    <h1 class = "site-title">Seat Yourself</h1>
+      <% if flash[:notice] %>
+       <div class="notice"><%= flash[:notice] %></div>
+      <% end %>
+      <% if flash[:alert] %>
+       <div class="alert"><%= flash[:alert] %></div>
+      <% end %>
 
-  <div class="session_options">
-    <% if current_user %>
-      Signed in as <%= current_user.email %>. <%= link_to "Log out", sessions_path, :method => :delete %>
-    <% else %>
-      <h4><%= link_to "Log in", new_sessions_path %> or <%= link_to "Sign up", new_users_path %></h4>
-    <% end %>
-  </div>
+    <ul site-nav-list>
+      <% if current_user %>
+        Signed in as <%= current_user.email %>. <a class = "list-item"><%= link_to "Log out", sessions_path, :method => :delete %></a>
+      <% else %>
+        <a class = "list-item"><%= link_to "Log in", new_sessions_path %></a> or <a class = "list-item"><%= link_to "Sign up", new_users_path %></a>
+      <% end %>
+    </ul>
+  </header>
 
 <%= yield %>
 
