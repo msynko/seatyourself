@@ -23,7 +23,7 @@ p {
   text-align: center;
   display: grid;
   width: 500px;
-  background-color: rgb(236, 236, 236);
+  background-color: #fff;
   clear: both;
   margin: 0 auto;
   margin-top: 5px;
@@ -31,7 +31,7 @@ p {
 }
 
 input {
-  border: none;
+  border: #666 solid;
   padding: 5px;
   margin: 2px;
   width: 200px;
