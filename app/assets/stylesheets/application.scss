@@ -14,88 +14,85 @@
  *= require_self
  */
  *,
- *::before,
- *::after {
-   box-sizing: border-box;
- }
-
-
- html {
-  box-sizing: border-box;
-  font-family: 'JelleeRoman';
-  font-size: 100%;
-  color: #333333;
-  background-color: rgb(236, 236, 236);
-}
-
-  body {
-  margin: 0;
-	padding: 0;
+  *::before,
+  *::after {
+    box-sizing: border-box;
   }
 
 
-.site-header {
-  // position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 100;
-  background-color: rgb(102, 9, 9);
-  color: white;
-  display: grid
+  html {
+   box-sizing: border-box;
+   font-family: 'JelleeRoman';
+   font-size: 100%;
+   color: #333333;
+   background-color: rgb(236, 236, 236);
+ }
 
-}
-.site-title {
-text-align: center;
-font-size: 2em;
-}
-.site-nav-list {
-  // text-align: right;
-  list-style-type: none;
-}
-.list-item {
-  text-align: right;
-}
-a {
-  text-decoration: none;
-  color: white;
-
-}
-a:hover {
-  color: red;
-}
-
-h3 {
-  color: black;
-}
-.tile {
-    width: 900px;
-    margin: 20px auto;
-    height: 400px;
-    background-color: white ;
-    color: black;
+   body {
+   margin: 0;
+     padding: 0;
+   }
 
 
+ .site-header {
+   // position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   width: 100%;
+   z-index: 100;
+   background-color: rgb(102, 9, 9);
+   color: white;
+   display: grid
 
-    img {
-      max-width: 100%;
-      max-height: 50%;
+ }
+ .site-title {
+ text-align: center;
+ font-size: 2em;
+ }
+ .site-nav-list {
+   // text-align: right;
+   list-style-type: none;
+ }
+ .list-item {
+   text-align: right;
+ }
+ a {
+   text-decoration: none;
+   color: white;
+
+ }
+ a:hover {
+   color: red;
+ }
+
+ h3 {
+   color: black;
+ }
+ .tile {
+     width: 900px;
+     margin: 20px auto;
+     height: 400px;
+     background-color: white ;
+     color: black;
 
 
 
-    }
+     img {
+       max-width: 100%;
+       max-height: 50%;
 
 
 
+     }
 
 
-}
-.tile-container {
-  display: grid;
-  grid-gap: 1px;
+ }
+ .tile-container {
+   display: grid;
+   grid-gap: 1px;
 
-  grid-template-columns: 1fr;
-  // grid-template-rows: 1fr 1fr;
-  max-width: 100%;
-}
+   grid-template-columns: 1fr;
+   // grid-template-rows: 1fr 1fr;
+   max-width: 100%;
+ }
