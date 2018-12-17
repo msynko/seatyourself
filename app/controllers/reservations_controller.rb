@@ -32,7 +32,7 @@ class ReservationsController < ApplicationController
       redirect_to restaurant_path(@restaurant)
       flash[:notice]= "You have added your reservation!"
     else
-      redirect_to root_url
+      redirect_to restaurant_path(@restaurant)
       flash[:notice] = "We could not add your reservation."
     end
   end

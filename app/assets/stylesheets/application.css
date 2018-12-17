@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+.flash_messages {
+  text-align: center;
+}
+
+.session_options {
+  text-align: center;
+}

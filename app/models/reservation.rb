@@ -8,7 +8,7 @@ class Reservation < ApplicationRecord
 
   def restaurant_is_open
     if restaurant.opening_time > self.time.hour || restaurant.closing_time < self.time.hour
-      errors[:base] << "Sorry, we're closed!"
+      errors.add(:opening_time, "Sorry, we're closed!")
     end
   end
 
@@ -21,7 +21,7 @@ class Reservation < ApplicationRecord
     end
     total_current_occupants += self.party_size
     if restaurant.max_capacity < total_current_occupants
-      errors[:base] << "Reservation not booked. Restaurant at capacity."
+      errors.add(:max_capacity, "Reservation not booked. Restaurant at capacity.")
       #reservation booking not possible
     end
   end
