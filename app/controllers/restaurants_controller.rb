@@ -1,14 +1,18 @@
 class RestaurantsController < ApplicationController
 
   before_action :ensure_logged_in, except: [:index, :show]
+  before_action :load_restaurant, except: [:new, :create, :index]
   before_action :ensure_user_owns_restaurant, only: [:edit, :update, :destroy]
+
+  def load_restaurant
+    @restaurant = Restaurant.find(params[:id])
+  end
 
   def index
     @restaurants = Restaurant.all
   end
 
   def show
-    @restaurant = Restaurant.find(params[:id])
     @reservation = Reservation.new
   end
 
@@ -26,7 +30,7 @@ class RestaurantsController < ApplicationController
     @restaurant.opening_time = params[:restaurant][:opening_time]
     @restaurant.closing_time = params[:restaurant][:closing_time]
     @restaurant.menu = params[:restaurant][:menu]
-
+    @restaurant.user_id = current_user.id
     if @restaurant.save
       redirect_to restaurant_path(@restaurant)
       flash[:notice] = "You have added your restaurant!"
@@ -37,11 +41,9 @@ class RestaurantsController < ApplicationController
   end
 
   def edit
-    @restaurant = Restaurant.find(params[:id])
   end
 
   def update
-    @restaurant = Restaurant.find(params[:id])
     @restaurant.name = params[:restaurant][:name]
     @restaurant.address = params[:restaurant][:address]
     @restaurant.phone_number = params[:restaurant][:phone_number]
@@ -61,7 +63,6 @@ class RestaurantsController < ApplicationController
   end
 
   def destroy
-    @restaurant= Restaurant.find(params[:id])
     @restaurant.destroy
     redirect_to "/restaurants"
     flash[:notice] = "Restaurant deleted"

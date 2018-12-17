@@ -1,6 +1,7 @@
 class Restaurant < ApplicationRecord
 
   has_many :reservations
+  belongs_to :user
 
   def closing_time_display
     if closing_time > 12
