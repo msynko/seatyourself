@@ -17,6 +17,7 @@
   *::before,
   *::after {
     box-sizing: border-box;
+    text-align: center;
   }
 
 
@@ -47,15 +48,17 @@
 
  }
  .site-title {
- text-align: center;
+ text-align: rigth;
  font-size: 2em;
  }
- .site-nav-list {
+ div.nav::after,
+ div.nav::before {
    // text-align: right;
    list-style-type: none;
+   text-align: left;
  }
  .list-item {
-   text-align: right;
+   text-align: left;
  }
  a {
    text-decoration: none;
@@ -64,6 +67,7 @@
  }
  a:hover {
    color: red;
+   text-align: center;
  }
 
  h3 {
@@ -71,9 +75,9 @@
  }
  .tile {
      width: 900px;
-     margin: 20px auto;
+     margin: 0 auto;
      height: 400px;
-     background-color: white ;
+     background-color: lightgrey ;
      color: black;
 
 
@@ -91,8 +95,7 @@
  .tile-container {
    display: grid;
    grid-gap: 1px;
-
    grid-template-columns: 1fr;
    // grid-template-rows: 1fr 1fr;
-   max-width: 100%;
+
  }
