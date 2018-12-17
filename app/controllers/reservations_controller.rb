@@ -1,5 +1,8 @@
 class ReservationsController < ApplicationController
 
+  before_action :ensure_logged_in
+  before_action :ensure_user_owns_reservation, only: [:show, :destroy]
+
   def index
     @restaurant = Restaurant.find(params[:restaurant_id])
     @reservations = @restaurant.reservations

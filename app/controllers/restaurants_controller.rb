@@ -1,5 +1,8 @@
 class RestaurantsController < ApplicationController
 
+  before_action :ensure_logged_in, except: [:index, :show]
+  before_action :ensure_user_owns_restaurant, only: [:edit, :update, :destroy]
+
   def index
     @restaurants = Restaurant.all
   end
