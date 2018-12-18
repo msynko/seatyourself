@@ -8,6 +8,6 @@
 <li>Party size: <%= reservation.party_size  %></li>
 </ul>
 
-<%= link_to 'Delete Reservation', restaurant_reservation_path(reservation.restaurant, reservation), method: :delete, data: {confirm: 'Are you sure you want to delete this reservation?'} %>
+<%= link_to 'Delete Reservation', restaurant_reservation_path(reservation.restaurant, reservation),:class=>"old", method: :delete, data: {confirm: 'Are you sure you want to delete this reservation?'} %>
 
 <%end%>

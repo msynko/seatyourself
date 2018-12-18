@@ -14,12 +14,12 @@
  *= require_self
  */
 
- *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    text-align: center;
-  }
+ // *,
+ //  *::before,
+ //  *::after {
+ //    box-sizing: border-box;
+ //    text-align: center;
+ //  }
 
 html {
   box-sizing: border-box;
@@ -27,6 +27,7 @@ html {
   font-size: 100%;
   color: #333333;
   background-color: #fff;
+  text-align: center;
  }
 
 body {
@@ -34,6 +35,16 @@ body {
   padding: 0;
 }
 
+
+li{
+  list-style-type: none;
+}
+.old{
+  color:black;
+}
+.new {
+  color:black;
+}
  .site-header {
    // position: fixed;
    top: 0;
@@ -95,4 +106,52 @@ body {
    grid-template-columns: 1fr;
    // grid-template-rows: 1fr 1fr;
    max-width: 100%;
+}
+
+sign_up_head {
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+ul {
+  display: inline-block;
+}
+
+p {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.new_user {
+  text-align: center;
+  display: grid;
+  width: 500px;
+  background-color: #fff;
+  clear: both;
+  margin: 0 auto;
+  margin-top: 5px;
+  padding: 15px;
+}
+
+input {
+  border: #666 solid;
+  padding: 5px;
+  margin: 2px;
+  width: 200px;
+}
+
+input[type=submit] {
+  background-color: #c64343;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 15px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
 }

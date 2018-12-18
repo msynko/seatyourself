@@ -3,23 +3,24 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .sign_up_head {
-  margin: 0 auto;
-  margin-top: 50px;
-  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
 }
 
 ul {
-  display: inline-block;
+  display: inline-block;
 }
 
 p {
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-top: 5px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-top: 5px;
 }
 
 .new_user {
+<<<<<<< HEAD
   text-align: center;
   display: grid;
   width: 500px;
@@ -35,17 +36,37 @@ input {
   padding: 5px;
   margin: 2px;
   width: 200px;
+=======
+  text-align: center;
+  display: grid;
+  width: 500px;
+  background-color: #fff;
+  clear: both;
+  margin: 0 auto;
+  margin-top: 5px;
+  padding: 15px;
 }
 
-input[type=submit] {
-  background-color: #c64343;
-  border: none;
-  color: white;
-  padding: 10px;
-  margin: 15px;
-  width: 150px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
+// input {
+//   border: #666 solid;
+//   padding: 5px;
+//   margin: 2px;
+//   width: 200px;
+// }
+//
+input[type="submit"] {
+  background-color: #c64343;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 15px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+>>>>>>> 3603868b3bf57c1456dad414acad36e4cfb86742
+}
+.old{
+  color:black;
 }
