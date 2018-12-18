@@ -20,7 +20,6 @@ p {
 }
 
 .new_user {
-<<<<<<< HEAD
   text-align: center;
   display: grid;
   width: 500px;
@@ -36,24 +35,8 @@ input {
   padding: 5px;
   margin: 2px;
   width: 200px;
-=======
-  text-align: center;
-  display: grid;
-  width: 500px;
-  background-color: #fff;
-  clear: both;
-  margin: 0 auto;
-  margin-top: 5px;
-  padding: 15px;
 }
 
-// input {
-//   border: #666 solid;
-//   padding: 5px;
-//   margin: 2px;
-//   width: 200px;
-// }
-//
 input[type="submit"] {
   background-color: #c64343;
   border: none;
@@ -65,8 +48,8 @@ input[type="submit"] {
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
->>>>>>> 3603868b3bf57c1456dad414acad36e4cfb86742
 }
-.old{
-  color:black;
+
+.old {
+  color: black;
 }
